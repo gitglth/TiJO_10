@@ -6,12 +6,12 @@ describe('app', function () {
     describe('assignToSwimmingCourse', function () {
         it('should assign adult person to adult group', function () {
             expect(app.assignToSwimmingCourse('Jack', '10/10/1995')).toEqual({
-                name: 'Jack', age: 21, course: 'adults'
+                name: 'Jack', age: 20, course: 'adults'
             });
         });
         it('should assign person between the ages of 12 - 17 to teens group', function () {
             expect(app.assignToSwimmingCourse('John', '07/10/2001')).toEqual({
-                name: 'John', age: 14, course: 'adults'
+                name: 'John', age: 14, course: 'teens'
             });
         });
         it('should assign person below 12 to kids group', function () {
@@ -31,12 +31,12 @@ describe('app', function () {
         });
         it('should assign person below 12 to kids group', function () {
             expect(app.calculateArea(5, 9, 7, 'Well done!', 'Try again')).toEqual({
-                area: 8, message: 'Try again'
+                area: -26, message: 'Try again'
             });
         });
         it('should assign person below 12 to kids group', function () {
             expect(app.calculateArea(5, 9, 7, 'Well done!', 'Try again')).toEqual({
-                area: -26, message 'Try again'
+                area: -26, message: 'Try again'
             });
         });
     });
